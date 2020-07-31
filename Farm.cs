@@ -6,8 +6,8 @@ namespace Assignment13
 {
     class Farm
     {
-        public string FarmName { get; set; }
-        public string FarmAdress { get; set; }
+        public string FarmName { get; private set; }
+        public string FarmAdress { get; private set; }
 
         private List<string> Horses { get; set; }
         private List<string> SheepFlock { get; set; }

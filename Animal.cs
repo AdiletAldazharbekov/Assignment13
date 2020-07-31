@@ -9,8 +9,8 @@ namespace Assignment13
         public string Name { get; set; }
         public bool Gender { get; set; }
 
-        public int Age { get; set; }
-        public int Weight { get; set; }
+        public abstract int Age { get; set; }
+        public abstract int Weight { get; set; }
 
         public Animal(string name, int age, bool gender, int weight)
         {
@@ -20,9 +20,6 @@ namespace Assignment13
             Weight = weight;
         }
 
-        public void Eat()
-        {
-            Console.WriteLine("20");
-        }
+        public abstract void Eat();
     }
 }
