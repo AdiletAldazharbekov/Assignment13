@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Assignment13.Farm" Collapsed="true">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+    <Position X="3.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AMAAAADCAAAAAAAAAAAAAIAAAAAAAAAAAAJIAAAAAAA=</HashCode>
       <FileName>Farm.cs</FileName>
@@ -24,7 +24,7 @@
   <Class Name="Assignment13.Horse" Collapsed="true">
     <Position X="7.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAEAAAAAAACAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAQAAAAEAAAAAAACAAQAAgAAAAAAAAAAA=</HashCode>
       <FileName>Horse.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -6,12 +6,49 @@ namespace Assignment13
     {
         static void Main(string[] args)
         {
-            Farm farm = new Farm("Crazy Farm", "Kyrgyzstan, Bishkek, Kolbaev str., 43");
 
-            var horse1 = new Horse("Horse 1", 5, true, 100);
-            farm.AddHorse(horse1.Name);
-            var horse2 = new Horse("Horse 2", 10, true, 200);
+            Console.WriteLine("Вас приветствует программа учета живности на ферме");
+            
 
+            var fields = (string[])Operation.Registration();
+            Farm farm = new Farm (fields[0], fields[1]);
+
+            while (true)
+            {
+                var input = Operation.MainOperation();
+
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("+ Лошадь");
+                        var fieldsHorse = (string[])Operation.AddAnimal();
+                        Horse horse = new Horse(fieldsHorse[0], Convert.ToInt32(fieldsHorse[1]), fieldsHorse[2], Convert.ToInt32(fieldsHorse[3]));
+                        farm.AddHorse(horse);
+                        break; 
+                    case 2:
+                        Console.WriteLine("+ Корова");
+                        var fieldsCow = (string[])Operation.AddAnimal();
+                        Cow cow = new Cow(fieldsCow[0], Convert.ToInt32(fieldsCow[1]), fieldsCow[2], Convert.ToInt32(fieldsCow[3]));
+                        farm.AddCow(cow);
+                        break;
+                    case 3:
+                        Console.WriteLine("+ Баран");
+                        var fieldsSheep = (string[])Operation.AddAnimal();
+                        Sheep sheep = new Sheep(fieldsSheep[0], Convert.ToInt32(fieldsSheep[1]), fieldsSheep[2], Convert.ToInt32(fieldsSheep[3]));
+                        farm.AddSheep(sheep);
+                        break;
+                    case 4:
+                        Console.WriteLine("+ Корм");
+                        break;
+                    default:
+                        break;
+                }
+                if (input == 0) break;
+            }
+
+
+
+           
 
 
             farm.FullInfo();

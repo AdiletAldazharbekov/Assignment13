@@ -6,16 +6,49 @@ namespace Assignment13
 {
     internal class Sheep : Animal
     {
-        public override int Age { get => Age; set => Age = value; }
-        public override int Weight { get => Weight; set => Weight = value; }
+        private int age;
+        private int weight;
 
-        public Sheep(string name, int age, bool gender, int weight) : base(name, age, gender, weight)
+
+        public override int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if (value < 1 || value > 10)
+                {
+                    Console.WriteLine("Возраст от 1 до 10");
+                }
+                else age = value;
+            }
+        }
+
+
+        public override int Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                if (value < 1 || value > 45)
+                {
+                    Console.WriteLine("Вес от 1 до 45");
+                }
+                else weight = value;
+            }
+        }
+        public Sheep(string name, int age, string gender, int weight) : base(name, age, gender, weight)
         {
         }
-        
+
         public override void Eat()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Животное питается");
         }
 
         public override void WhatFeed()
