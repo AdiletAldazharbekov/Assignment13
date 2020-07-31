@@ -19,24 +19,42 @@ namespace Assignment13
             FarmAdress = farmAdress;
 
         }
-         public void AddHorse()
+         public void AddHorse(string name)
         {
-            //AddHorse() добавляет Horse в табун
+            //AddHorse() добавляет Horse в табу
+            Horses.Add(name);
         }
 
-        public void AddCow()
+        public void AddCow(string name)
         {
             // AddCow(); добавляет Cow в стадо
+            Cows.Add(name);
         }
 
-        public void AddSheep()
+        public void AddSheep(string name)
         {
             // AddSheep(); добавляет Sheep в стадо
+            SheepFlock.Add(name);
         }
 
         public void FullInfo()
         {
             // Полная информация о ферме(Название фермы, адрес и вывести по отдельности всех животных)
+            Console.WriteLine($"\tФерма: {FarmName}\n\tАдрес: {FarmAdress}\n\tСостав фермы:\n\n");
+            //List<string> animals = new List<string>();
+           
+            //foreach (var a in Horses)
+            //{
+            //    Console.WriteLine(a);
+            //}
+            //foreach (var a in Cows)
+            //{
+            //    Console.WriteLine(a);
+            //}
+            //foreach (var a in SheepFlock)
+            //{
+            //    Console.WriteLine(a);
+            //}
         }
     }
 }
