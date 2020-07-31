@@ -6,8 +6,8 @@ namespace Assignment13
 {
     abstract class Animal
     {
-        public string Name { get; set; }
-        public bool Gender { get; set; }
+        public string Name { get; private set; }
+        public bool Gender { get; private set; }
 
         public abstract int Age { get; set; }
         public abstract int Weight { get; set; }
@@ -21,5 +21,6 @@ namespace Assignment13
         }
 
         public abstract void Eat();
+        public abstract void WhatFeed();
     }
 }
