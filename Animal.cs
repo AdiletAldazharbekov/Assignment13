@@ -11,16 +11,18 @@ namespace Assignment13
 
         public abstract int Age { get; set; }
         public abstract int Weight { get; set; }
+        public abstract string Korm { get; set; }
 
-        public Animal(string name, int age, string gender, int weight)
+
+        public Animal(string name, int age, string gender, int weight, string korm)
         {
             Name = name;
             Age = age;
             Gender = gender;
             Weight = weight;
+            Korm = korm;
         }
 
-        public abstract void Eat();
-        public abstract void WhatFeed();
+        public abstract void Eat(Animal animal);
     }
 }
