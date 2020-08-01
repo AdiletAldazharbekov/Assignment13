@@ -13,6 +13,7 @@ namespace Assignment13
 
             while (true)
             {
+                
                 var input = Operation.MainOperation();
                 switch (input)
                 {

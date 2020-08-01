@@ -50,7 +50,7 @@ namespace Assignment13
 
         public override void Eat(Animal animal)
         {
-            Console.WriteLine($"{animal.GetType()} Корм: {animal.Korm}");
+            Console.WriteLine($"{animal.GetType()} {animal.Name} ест: {animal.Korm}");
         }
     }
 }
